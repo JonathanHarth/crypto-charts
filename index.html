@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top 100 Crypto — Price History</title>
+  <link rel="stylesheet" href="src/styles.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "lightweight-charts": "https://esm.sh/lightweight-charts@5",
+      "idb": "https://esm.sh/idb@8"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="header-titles">
+      <h1>Top 100 Crypto — Price History</h1>
+      <p id="status" class="status">Booting…</p>
+    </div>
+    <nav class="mode-controls" id="mode-controls">
+      <a href="?mode=top" data-mode="top">Top 100</a>
+      <a href="?mode=top500" data-mode="top500">Top 500</a>
+      <a href="?mode=random" data-mode="random">Random sample</a>
+      <button type="button" id="reshuffle" hidden>Reshuffle</button>
+    </nav>
+  </header>
+  <main>
+    <div id="chart" class="chart-container">
+      <div id="tooltip" class="tooltip" hidden></div>
+    </div>
+    <section id="analysis" class="analysis">
+      <h2>Analysis</h2>
+      <p id="selection-notice" class="selection-notice"></p>
+      <div id="stats" class="stats">Waiting for data…</div>
+      <div id="leaderboards" class="leaderboards"></div>
+    </section>
+  </main>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
